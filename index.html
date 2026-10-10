@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Encuentro 2026 Madrid 🎩 | La Familia Solana</title>
+  <meta name="description" content="Guía oficial e interactiva para El Encuentro 2026 en Madrid, el evento insignia de La Familia y el epicentro de Solana en España.">
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card-bg: #151821;
+      --card-border: #242938;
+      --primary: #9945FF;
+      --secondary: #14F195;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --accent: #ff4081;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(180deg, rgba(153, 69, 255, 0.15) 0%, rgba(11, 12, 16, 0) 100%);
+      padding: 3rem 1.5rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(20, 241, 149, 0.1);
+      color: var(--secondary);
+      border: 1px solid rgba(20, 241, 149, 0.3);
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(90deg, #ffffff 0%, var(--secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .meta-bar {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--card-bg);
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, #7c3aed 100%);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(153, 69, 255, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(153, 69, 255, 0.6);
+    }
+
+    .btn-secondary {
+      background: var(--card-bg);
+      color: var(--secondary);
+      border: 1px solid var(--secondary);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(20, 241, 149, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Countdown */
+    .countdown-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .countdown-grid {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .countdown-box {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      min-width: 70px;
+      border: 1px solid var(--card-border);
+    }
+
+    .countdown-val {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--secondary);
+    }
+
+    .countdown-lbl {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #c9d1d9;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: var(--primary);
+    }
+
+    .card h3 {
+      color: var(--secondary);
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 1.25rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+    }
+
+    .time-slot {
+      font-weight: 800;
+      color: var(--secondary);
+      font-size: 0.95rem;
+      min-width: 110px;
+    }
+
+    .time-desc h4 {
+      color: #fff;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .time-desc p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Banner SVG */
+    .vector-banner {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge">El Evento Solana del Año en España</div>
+    <h1>El Encuentro 2026 Madrid 🎩</h1>
+    <p class="subtitle">12 horas continuas conectando a los builders, desarrolladores, fundadores y comunidades que están construyendo el futuro descentralizado en español.</p>
+    
+    <div class="meta-bar">
+      <div class="meta-item">📅 Lunes, 26 de Octubre de 2026</div>
+      <div class="meta-item">⏰ 10:00 – 22:00 GMT+1</div>
+      <div class="meta-item">📍 Madrid, España</div>
+      <div class="meta-item">🎟️ 100% Gratuito (Aforo Limitado)</div>
+    </div>
+
+    <div class="btn-group">
+      <a href="https://lafamilia.so/ir/encuentro-st" target="_blank" rel="noopener" class="btn btn-primary">Web Oficial de La Familia 🎩</a>
+      <a href="https://luma.com/66thrqij" target="_blank" rel="noopener" class="btn btn-secondary">Reservar Entrada Gratuita en Luma ⚡</a>
+    </div>
+
+    <!-- Live Countdown -->
+    <div class="countdown-section">
+      <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted);">CUENTA ATRÁS PARA EL ENCUENTRO 2026</div>
+      <div class="countdown-grid">
+        <div class="countdown-box">
+          <div class="countdown-val" id="days">--</div>
+          <div class="countdown-lbl">Días</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-val" id="hours">--</div>
+          <div class="countdown-lbl">Horas</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-val" id="mins">--</div>
+          <div class="countdown-lbl">Minutos</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-val" id="secs">--</div>
+          <div class="countdown-lbl">Segundos</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Vector Illustration -->
+    <div class="vector-banner">
+      <svg viewBox="0 0 900 240" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="solGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#9945FF" />
+            <stop offset="50%" stop-color="#14F195" />
+            <stop offset="100%" stop-color="#00C2FF" />
+          </linearGradient>
+          <linearGradient id="darkBg" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#151821" />
+            <stop offset="100%" stop-color="#0b0c10" />
+          </linearGradient>
+        </defs>
+        <rect width="900" height="240" fill="url(#darkBg)" />
+        <circle cx="150" cy="120" r="80" fill="url(#solGrad)" opacity="0.12" />
+        <circle cx="750" cy="120" r="100" fill="url(#solGrad)" opacity="0.1" />
+        
+        <!-- Hat Silhouette 🎩 -->
+        <path d="M410 145 H490 V105 C490 95 480 90 450 90 C420 90 410 95 410 105 Z" fill="#ffffff" opacity="0.9" />
+        <rect x="385" y="145" width="130" height="10" rx="5" fill="url(#solGrad)" />
+        <rect x="410" y="132" width="80" height="6" fill="#14F195" />
+        
+        <text x="450" y="185" fill="#ffffff" font-size="20" font-weight="800" text-anchor="middle" font-family="sans-serif">EL ENCUENTRO 2026</text>
+        <text x="450" y="210" fill="#14F195" font-size="13" font-weight="600" text-anchor="middle" font-family="sans-serif">MADRID • 26 DE OCTUBRE • LA FAMILIA SOLANA</text>
+      </svg>
+    </div>
+
+    <!-- Section 1 -->
+    <section>
+      <h2>🌟 El Despertar Builder en Madrid</h2>
+      <p>España se ha posicionado en el epicentro de la innovación descentralizada en Europa. Dentro del ecosistema <strong>Solana</strong>, la comunidad hispanohablante está protagonizando un crecimiento histórico: desde protocolos DeFi de liquidez concentrada y primitivos de token launchpad, hasta integraciones punteras de inteligencia artificial on-chain, Actions, Blinks y redes DePIN.</p>
+      <p><strong>El Encuentro 2026</strong> organizado por <strong><a href="https://lafamilia.so/ir/encuentro-st" target="_blank" rel="noopener" style="color: var(--secondary); text-decoration: none;">La Familia (@LaFamilia_so)</a></strong> es el punto de encuentro anual donde las ideas abstractas se convierten en colaboraciones, equipos de hackathon y proyectos reales en mainnet.</p>
+    </section>
+
+    <!-- Section 2: Timeline -->
+    <section>
+      <h2>⏱️ Agenda Completa de 12 Horas (10:00 – 22:00)</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="time-slot">10:00 – 11:30</div>
+          <div class="time-desc">
+            <h4>Check-in, Bienvenida & Desayuno Builder</h4>
+            <p>Acreditaciones, recogida de credenciales, café de especialidad y primeras dinámicas para romper el hielo.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="time-slot">11:30 – 14:00</div>
+          <div class="time-desc">
+            <h4>Keynotes Magistrales & Paneles de Alto Nivel</h4>
+            <p>Evolución técnica de Solana, primitivos de Actions y Blinks, oportunidades en la economía de agentes y escalabilidad.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="time-slot">14:00 – 16:00</div>
+          <div class="time-desc">
+            <h4>Almuerzo Comunitario & Networking 1-a-1</h4>
+            <p>Conexión directa entre fundadores, inversores, patrocinadores y desarrolladores en un ambiente distendido.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="time-slot">16:00 – 19:00</div>
+          <div class="time-desc">
+            <h4>Workshops Técnicos & Sesiones Prácticas</h4>
+            <p>Construcción en Rust/Anchor, testing de programas, agentes autónomos y herramientas para desarrolladores.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="time-slot">19:00 – 22:00</div>
+          <div class="time-desc">
+            <h4>Demo Day, Cierre & After-Networking</h4>
+            <p>Muestra relámpago de proyectos de la comunidad, balance del año y cóctel de networking para sellar alianzas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: 5 Key Reasons -->
+    <section>
+      <h2>🔥 5 Razones Indispensables para Asistir</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>1. Networking de Máximo Impacto</h3>
+          <p>Conoce en persona a los fundadores, desarrolladores e inversores que están definiendo el ecosistema en España y Latinoamérica.</p>
+        </div>
+        <div class="card">
+          <h3>2. Conocimiento Técnico Sin Filtros</h3>
+          <p>Aprende de primera mano los desafíos reales de desplegar proyectos a escala en Solana mainnet.</p>
+        </div>
+        <div class="card">
+          <h3>3. Sinergia con Merge Madrid 2026</h3>
+          <p>Alineación directa con los eventos globales de Web3 que sitúan a Madrid como la capital de habla hispana del sector.</p>
+        </div>
+        <div class="card">
+          <h3>4. Formación de Equipos para Hackathones</h3>
+          <p>Encuentra tus futuros co-fundadores y compañeros de equipo para competir en Colosseum, Radar y Breakpoint.</p>
+        </div>
+        <div class="card">
+          <h3>5. Entrada 100% Gratuita</h3>
+          <p>Acceso libre para builders comprometidos. El aforo es limitado para garantizar calidad y comodidad.</p>
+        </div>
+        <div class="card">
+          <h3>Comunidad La Familia 🎩</h3>
+          <p>Forma parte de una hermandad abierta que apoya el talento desde el primer día y celebra cada victoria colectiva.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: How to Register -->
+    <section>
+      <h2>🎟️ Cómo Asegurar tu Plaza Gratuita</h2>
+      <p>Sigue estos sencillos pasos antes de que se agote el aforo:</p>
+      <ol style="margin-left: 1.5rem; color: #c9d1d9; margin-bottom: 1.5rem;">
+        <li style="margin-bottom: 0.5rem;">Accede a la web oficial del evento: <strong><a href="https://lafamilia.so/ir/encuentro-st" target="_blank" rel="noopener" style="color: var(--secondary);">https://lafamilia.so/ir/encuentro-st</a></strong>.</li>
+        <li style="margin-bottom: 0.5rem;">Solicita tu entrada en la plataforma oficial de registro en Luma: <strong><a href="https://luma.com/66thrqij" target="_blank" rel="noopener" style="color: var(--secondary);">https://luma.com/66thrqij</a></strong>.</li>
+        <li style="margin-bottom: 0.5rem;">Rellena tu nombre, correo y tu proyecto o rol en el ecosistema.</li>
+        <li>Recibirás un correo de confirmación con la dirección exacta del recinto en Madrid una vez aprobada tu plaza.</li>
+      </ol>
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <a href="https://lafamilia.so/ir/encuentro-st" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.2rem;">¡Quiero mi Plaza en El Encuentro 2026! 🎩</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Organizado por <strong>La Familia</strong> (<a href="https://x.com/LaFamilia_so" target="_blank" rel="noopener">@LaFamilia_so</a>) • Comunidad Oficial en Telegram: <a href="https://t.me/SolanaSpanish" target="_blank" rel="noopener">t.me/SolanaSpanish</a></p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #6e7681;">Página comunitaria e interactiva creada para el programa de difusión y promoción de El Encuentro 2026. Enlace oficial: <a href="https://lafamilia.so/ir/encuentro-st" target="_blank" rel="noopener">https://lafamilia.so/ir/encuentro-st</a></p>
+  </footer>
+
+  <script>
+    // Countdown Timer logic for October 26, 2026 10:00:00 GMT+0100
+    const targetDate = new Date("2026-10-26T10:00:00+01:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        document.getElementById("days").innerText = "0";
+        document.getElementById("hours").innerText = "0";
+        document.getElementById("mins").innerText = "0";
+        document.getElementById("secs").innerText = "0";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("mins").innerText = minutes;
+      document.getElementById("secs").innerText = seconds;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
